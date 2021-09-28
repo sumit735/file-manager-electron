@@ -1,6 +1,7 @@
 const { app, BrowserWindow, webContents, dialog, ipcMain } = require('electron');
 const path = require('path');
 const fs = require('fs');
+const { showError } = require('./utils/errors');
 require('@electron/remote/main').initialize();
 
 let win;
@@ -25,7 +26,7 @@ function createWindow () {
 }
 
 app.whenReady().then(() => {
-    createWindow()
+    createWindow();
 })
 
 // handle renderer calls here
@@ -76,6 +77,7 @@ ipcMain.on( 'renderer', async ( evt, msg ) => {
             }
         } else {
             // semd error
+            showError( 'error', 'Empty Folder', 'kindly enter a valid folder name' );
         }
     }
 
@@ -95,6 +97,7 @@ ipcMain.on( 'renderer', async ( evt, msg ) => {
             }
         } else {
             // semd error
+            showError( 'error', 'Empty File', 'kindly enter a valid file name' );
         }
     }
 } )

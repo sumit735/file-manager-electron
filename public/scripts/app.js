@@ -28,7 +28,7 @@ const createDir = () => {
     }
 }
 const createFile = () => {
-    let fileModal = document.querySelector('.fileModalError');
+    let fileModal = document.querySelector('.fileModalMsg');
     try {
         let fileName = document.getElementById('file').value;
         let rootFolder = document.querySelector('.rootFolder').value;
