@@ -1,14 +1,17 @@
 {
   "name": "task-indeed",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "description": "Basic File Manager App",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "author": "",
+  "author": {
+    "name": "sumit735",
+    "email": "sumitkumardash1999@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.61",
